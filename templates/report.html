@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report - Object Detection</title>
+    <style>
+        /* Reset untuk margin dan padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0f4f8, #cce7e6);
+            color: #333;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #388E3C;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        table {
+            width: 90%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 16px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+            transform: scale(1.02);
+            transition: 0.3s ease-in-out;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #388E3C;
+            transform: translateY(-2px);
+        }
+
+        .download-btn {
+            background-color: #007bff;
+        }
+
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .cta-section {
+            margin-top: 40px;
+        }
+
+        /* Responsivitas untuk layar kecil */
+        @media (max-width: 768px) {
+            table {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            th,
+            td {
+                font-size: 1em;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Object Detection Report</h1>
+
+    {% if data %}
+    <table>
+        <thead>
+            <tr>
+                <th>Buah</th>
+                <th>Hasil Panen</th>
+                <th>Waktu Perhitungan</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row['Buah'] }}</td>
+                <td>{{ row['Hasil Panen'] }}</td>
+                <td>{{ row['Start Time'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No data available. Start detection to see results.</p>
+    {% endif %}
+
+    <div class="cta-section">
+        <a href="/" class="download-btn">Back to Home</a>
+        <a href="{{ url_for('download_csv') }}" class="download-btn">Download CSV</a> <!-- Tombol untuk download CSV -->
+    </div>
+
+</body>
+
+</html>

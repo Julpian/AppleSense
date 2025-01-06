@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - AppleSense</title>
+    <style>
+        /* Reset beberapa margin dan padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #e8f5e9);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #2C6B3F;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-align: center;
+            padding: 18px 25px;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #388E3C;
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            background-color: #4CAF50;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: #388E3C;
+            margin: 30px 0 20px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #666;
+            margin: 20px auto;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .team-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            justify-content: center;
+            align-items: start;
+            padding: 40px;
+        }
+
+        .team-member {
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+            border: 3px solid #388E3C;
+        }
+
+        .team-member h3 {
+            font-size: 1.4em;
+            color: #388E3C;
+            margin-bottom: 10px;
+        }
+
+        .team-member p {
+            font-size: 1em;
+            color: #777;
+        }
+
+        footer {
+            background-color: #f5f5f5;
+            color: #555;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 1.1em;
+        }
+
+        /* Responsif untuk perangkat kecil */
+        @media (max-width: 768px) {
+            .team-member img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .team-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="/" class="">Beranda</a>
+        <a href="/detection">Counting Hasil Panen</a>
+        <a href="/report">Report Hasil Panen</a>
+        <a href="/about" class="active">Tentang Kami</a>
+    </nav>
+
+    <div class="container">
+        <h1>Tentang Kami</h1>
+        <p>
+            Kami adalah tim dari AppleSense, yang mengembangkan proyek ini sebagai bagian dari 
+            tugas akhir mata kuliah Visi Komputer dan Robotika yang diampu oleh Ibu Neng Ika Kurniati, 
+            M.Cs. Proyek ini bertujuan untuk mengintegrasikan teknologi berbasis object detection guna 
+            memberikan solusi inovatif dalam meningkatkan efisiensi dan akurasi di bidang pertanian. Dengan 
+            dedikasi tinggi, kami berharap hasil karya ini dapat bermanfaat tidak hanya dalam konteks akademik, 
+            tetapi juga dalam implementasi nyata di masyarakat.
+        </p>
+
+        <div class="team-section">
+            <!-- Anggota Tim -->
+            <div class="team-member">
+                <img src="https://raw.githubusercontent.com/ZulfanAlfarra/viskom/main/gambar/LutfiJupian.jpg"
+                    alt="Foto Anggota 1">
+                <h3>Lutfi Julpian</h3>
+                <p>217006518 <br>Front-End</p>
+            </div>
+            <div class="team-member">
+                <img src="https://raw.githubusercontent.com/ZulfanAlfarra/viskom/main/gambar/moh%20faikar.jpg"
+                    alt="Foto Anggota 2">
+                <h3>Mohammad Faikar N</h3>
+                <p>217006070 <br>RoboCraft</p>
+            </div>
+            <div class="team-member">
+                <img src="https://raw.githubusercontent.com/ZulfanAlfarra/viskom/main/gambar/zulfan.jpg"
+                    alt="Foto Anggota 3">
+                <h3>Zulfan Syahidan A</h3>
+                <p>217006099 <br>Back-End & Modeling</p>
+            </div>
+            <div class="team-member">
+                <img src="https://raw.githubusercontent.com/ZulfanAlfarra/viskom/main/gambar/shafwan.jpg"
+                    alt="Foto Anggota 4">
+                <h3>Muhammad Shafwan A</h3>
+                <p>217006104 <br>Back-End & Modeling</p>
+            </div>
+            <!-- Tambahkan anggota lain jika diperlukan -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Kelompok AppleSense. Semua hak dilindungi.</p>
+    </footer>
+</body>
+
+</html>

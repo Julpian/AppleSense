@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppleSense</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4CAF50, #81C784);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            border-bottom: 5px solid #388E3C;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #2C6B3F;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-align: center;
+            padding: 18px 25px;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #388E3C;
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            background-color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .content {
+            text-align: center;
+            padding: 60px 30px;
+            background-color: white;
+            margin: 30px auto;
+            border-radius: 10px;
+            max-width: 800px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h3 {
+            font-size: 2em;
+            font-weight: 600;
+            color: #388E3C;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .content a {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .content a:hover {
+            background-color: #388E3C;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #2C6B3F;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 1em;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                padding: 10px 15px;
+                font-size: 1em;
+            }
+
+            .content h3 {
+                font-size: 1.8em;
+            }
+
+            .content p {
+                font-size: 1em;
+            }
+
+            .content a {
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>AppleSense</h1>
+        <p>Selamat datang di halaman utama! Temukan berbagai layanan dan informasi yang kami tawarkan.</p>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="/" class="active">Beranda</a>
+        <a href="/detection">Counting Hasil Panen</a>
+        <a href="/report">Report Hasil Panen</a>
+        <a href="/about">Tentang Kami</a>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h3>Selamat datang di layanan kami!</h3>
+        <p>Silakan pilih layanan di atas untuk melanjutkan.</p>
+        <a href="/detection">Mulai Counting</a>
+        <a href="/report">Lihat Report</a>
+        <br><br>
+
+        <h3>Profil Proyek</h3>
+        <p>
+            Dalam industri pertanian modern, efisiensi dan kualitas hasil panen menjadi faktor penting. Proses sortir apel secara manual menghadapi tantangan seperti keterbatasan tenaga kerja, potensi kesalahan, dan waktu yang lama. Oleh karena itu, teknologi berbasis AI dan Computer Vision menawarkan solusi inovatif.
+        </p>
+        <p>
+            Sistem deteksi dan penghitungan apel berbasis YOLO ini mampu bekerja secara real-time untuk mengidentifikasi parameter kualitas seperti ukuran dan warna, sekaligus menghitung hasil panen otomatis. Proyek ini juga mencakup desain robotika pasca panen, meski implementasi fisik hanya pada sistem deteksi berbasis web.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Kelompok AppleSense. Semua hak dilindungi.</p>
+    </footer>
+</body>
+
+</html>
